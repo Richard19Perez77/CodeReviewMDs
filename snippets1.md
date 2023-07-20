@@ -13,11 +13,8 @@ println(lotOfNumbers.joinTo(firstNumbers, limit = 5).toString()) // First five n
 ```
 val numbers = listOf(1, 2, 3)
 println(numbers.map { it * it }) // [1, 4, 9]
-// [1, 4, 9]
 
 val peopleToAge = mapOf("Alice" to 20, "Bob" to 21)
 println(peopleToAge.map { (name, age) -> "$name is $age years old" }) // [Alice is 20 years old, Bob is 21 years old]
 println(peopleToAge.map { it.value }) // [20, 21]
-// [Alice is 20 years old, Bob is 21 years old]
-// [20, 21]
 ```
