@@ -37,3 +37,30 @@ fun main() {
 Original list: [1, 2, 3, 4, 5]
 Modified list: [1, 3, 5]
 ```
+
+`none` is used to check for items in a list and returns true or false
+```
+val emptyList = emptyList<Int>()
+println("emptyList.none() is ${emptyList.none()}") // true
+​
+val nonEmptyList = listOf("one", "two", "three")
+println("nonEmptyList.none() is ${nonEmptyList.none()}") // false
+emptyList.none() is true
+nonEmptyList.none() is false
+
+val isEven: (Int) -> Boolean = { it % 2 == 0 }
+val zeroToTen = 0..10
+println("zeroToTen.none { isEven(it) } is ${zeroToTen.none { isEven(it) }}") // false
+println("zeroToTen.none(isEven) is ${zeroToTen.none(isEven)}") // false
+
+val odds = zeroToTen.map { it * 2 + 1 }
+println("odds.none { isEven(it) } is ${odds.none { isEven(it) }}") // true
+
+val emptyList = emptyList<Int>()
+println("emptyList.none { true } is ${emptyList.none { true }}") // true
+
+zeroToTen.none { isEven(it) } is false
+zeroToTen.none(isEven) is false
+odds.none { isEven(it) } is true
+emptyList.none { true } is true
+```
