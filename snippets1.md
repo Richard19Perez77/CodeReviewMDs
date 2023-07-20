@@ -18,3 +18,22 @@ val peopleToAge = mapOf("Alice" to 20, "Bob" to 21)
 println(peopleToAge.map { (name, age) -> "$name is $age years old" }) // [Alice is 20 years old, Bob is 21 years old]
 println(peopleToAge.map { it.value }) // [20, 21]
 ```
+`minus` can be used to remove a list from a list
+```
+fun main() {
+    // Sample list of integers
+    val originalList = listOf(1, 2, 3, 4, 5)
+
+    // Elements to be removed
+    val elementsToRemove = listOf(2, 4)
+
+    // Create a new list without the elements specified to be removed
+    val modifiedList = originalList.minus(elementsToRemove)
+
+    println("Original list: $originalList")
+    println("Modified list: $modifiedList")
+}
+
+Original list: [1, 2, 3, 4, 5]
+Modified list: [1, 3, 5]
+```
