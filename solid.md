@@ -1,8 +1,8 @@
 `SOLID` - principles
 
-`Single responsibility principle` - one class does one thing
+`Single responsibility principle` - ne class does one thing, instead of doing too much work in a single method, separate into a new class for different or next step of work.
 
-`Open Closed Principle` - an interface should be open for extending but closed for modification
+`Open Closed Principle` - An interface should be open for extending but closed for modification. Should be able to abstract out the work and implement different use cases not a single interface with multiple use cases within it, constantly extending or adding work to the single interface, class or module.
 
 `Liskov Substitution Principle` - an inheriting class should run separate from the parent without changing parent behaviour
 
