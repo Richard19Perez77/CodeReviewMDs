@@ -8,4 +8,4 @@
 
 `Interface Segregation Policy` - Interfaces should only be implementing if used, a class shouldn't depend on methods in an interface that it won't use. May need a separate interface for different functionalities instead of one interface for many different idea of realizing work for them, separating work to it's own interface.
 
-`Dependency Inversion` - Abstractions shouldn't depend on details and details should be implementations of an abstraction
+`Dependency Inversion` - Abstractions shouldn't depend on details and details should be implementations of an abstraction. Injecting class to it's using class will remove the coupling to it and make testing easier.
