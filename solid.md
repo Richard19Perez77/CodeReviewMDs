@@ -6,6 +6,6 @@
 
 `Liskov Substitution Principle` - Using an inheriting class should run separate from the parent without changing parent behaviour, a class performing work that isn't accurate the expected implementation is broken, using a setter for two variables when different implementations may only use one.
 
-`Interface Segregation Policy` - Interfaces should only be implementing if used, a class shouldn't depend on methods in an interface that it won't use
+`Interface Segregation Policy` - Interfaces should only be implementing if used, a class shouldn't depend on methods in an interface that it won't use. May need a separate interface for different functionalities instead of one interface for many different idea of realizing work for them, separating work to it's own interface.
 
 `Dependency Inversion` - Abstractions shouldn't depend on details and details should be implementations of an abstraction
