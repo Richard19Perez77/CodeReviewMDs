@@ -114,3 +114,17 @@ val moreWords = "eleven twelve".split(' ')
 val moreFrequencies = moreWords.groupingBy { it.first() }.eachCountTo(frequenciesByFirstChar.toMutableMap())
 println(moreFrequencies) // {o=1, t=4, f=2, s=2, e=2, n=1}
 ```
+
+`groupingBy` with `aggregate` from a `listOf` int
+```
+val numbers = listOf(3, 4, 5, 6, 7, 8, 9)
+
+val aggregated = numbers.groupingBy { it % 3 }.aggregate { key, accumulator: StringBuilder?, element, first ->
+    if (first) // first element
+    StringBuilder().append(key).append(":").append(element)
+    else
+    accumulator!!.append("-").append(element)
+}
+
+println(aggregated.values) // [0:3-6-9, 1:4-7, 2:5-8]
+```
